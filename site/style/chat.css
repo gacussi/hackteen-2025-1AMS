@@ -1,0 +1,143 @@
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fundo escuro */
+    color: #ffffff; /* Texto claro */
+    position: relative;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #6a0dad; /* Roxo para o cabeçalho */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header .animate-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header .highlight {
+    color: #FFD700; /* Dourado para destacar "AI" */
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Container do chat */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: calc(100vh - 70px);
+    padding: 20px;
+    background-color: transparent; /* Fundo será o de partículas */
+    position: relative;
+    z-index: 5;
+}
+
+.chat-box {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(46, 46, 46, 0.9); /* Fundo semi-transparente para o chat */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+    border-bottom: 1px solid #444; /* Linha sutil */
+    background-color: transparent; /* Transparência para o fundo */
+    color: #ddd; /* Texto claro */
+}
+
+.messages .message {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.messages .message .username {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #FFD700; /* Dourado para o nome do usuário */
+}
+
+.messages .message .text {
+    word-wrap: break-word;
+}
+
+.chat-form {
+    display: flex;
+    padding: 10px;
+    background-color: rgba(46, 46, 46, 0.9); /* Fundo semi-transparente */
+}
+
+.chat-form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    margin-right: 10px;
+    outline: none;
+    background-color: #1e1e1e; /* Fundo escuro */
+    color: #eee; /* Texto claro */
+}
+
+.chat-form input[type="text"]:focus {
+    border-color: #6a0dad; /* Roxo */
+}
+
+.chat-form button {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-form button:hover {
+    background-color: #5a0080; /* Roxo mais escuro */
+}
+
+.chat-form button:active {
+    background-color: #4b0069;
+}
+
+/* Fundo de partículas */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Fica atrás de todo o conteúdo */
+    background-color: #121212; /* Fundo consistente com o site */
+}

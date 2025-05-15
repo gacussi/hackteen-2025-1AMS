@@ -1,0 +1,110 @@
+/* Estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #372F41; /* Fundo inicial */
+  overflow: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.transparent-box {
+  background-color: rgba(0, 0, 0, 0.10); /* Fundo preto semitransparente */
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.10);
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #6C2CC0;
+  padding: 10px 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+}
+
+.header .highlight {
+  color: #6E0EEB;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  padding: 50px 15px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #6C2CC0;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #E8E6E3;
+}
+
+.cta-button {
+  background-color: #6E0EEB;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+}
+
+/* Rodapé */
+.footer {
+  background-color: #503C6B;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 50px;
+}
+
+/* Animação do fundo */
+.canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

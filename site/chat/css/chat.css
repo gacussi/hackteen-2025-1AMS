@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Fundo geral escuro */
+    color: white; /* Texto padrão branco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda a altura da janela */
+}
+
+/* Container principal */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 700px;
+    height: 85vh;
+    background: #1E1E1E;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin: auto; /* Centraliza verticalmente */
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #6a0dad;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center; /* Centraliza o título */
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    font-size: 20px;
+    font-weight: bold;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Área de mensagens */
+.message-area {
+    flex: 1;
+    padding: 20px; /* Aumentei o padding para melhorar a legibilidade */
+    overflow-y: auto;
+    background: #181818; /* Fundo ligeiramente mais claro */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre mensagens */
+}
+
+.message {
+    padding: 10px 15px;
+    background: #282828; /* Fundo das mensagens */
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para mensagens */
+}
+
+.message span {
+    font-weight: bold;
+    color: #FFD700; /* Nome do usuário em dourado */
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Formulário de envio */
+.send-message-form {
+    display: flex;
+    align-items: center; /* Centraliza o input e o botão */
+    padding: 15px; /* Aumentei o padding para melhor proporção */
+    background: #1E1E1E;
+    border-top: 1px solid #6a0dad;
+    gap: 10px; /* Espaçamento entre o input e o botão */
+}
+
+.send-message-form input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: #282828;
+    color: white;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.send-message-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #6a0dad;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.send-message-form button:hover {
+    background-color: #7942ba;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 768px) {
+    .chat-container {
+        height: 90vh; /* Usa mais altura em telas menores */
+    }
+
+    .header {
+        font-size: 18px; /* Reduz o tamanho do texto no cabeçalho */
+    }
+
+    .send-message-form input {
+        font-size: 12px; /* Reduz o tamanho do texto no input */
+    }
+
+    .send-message-form button {
+        font-size: 12px; /* Reduz o tamanho do botão */
+        padding: 8px 15px; /* Ajusta o padding do botão */
+    }
+}

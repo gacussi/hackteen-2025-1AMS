@@ -1,0 +1,153 @@
+/* Estilo geral para todos os chats */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background-color: #121212; /* Tema escuro */
+    color: #FFFFFF; /* Texto claro */
+    display: flex;
+    justify-content: center; /* Centraliza o chat horizontalmente */
+    align-items: center; /* Centraliza o chat verticalmente */
+    height: 100vh;
+}
+
+/* Container principal do chat */
+/* Container principal do chat (dobrando a largura) */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 98%; /* Pode permanecer assim para ocupar quase toda a largura disponível */
+    max-width: 700px; /* Aumentado de 352px para 700px (dobrando o tamanho anterior) */
+    height: 90%; /* Mantém a altura */
+    background: #1E1E1E; /* Fundo sólido escuro */
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Cabeçalho com o ícone do menu */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2C2C2C; /* Fundo do cabeçalho */
+    border-bottom: 1px solid #444; /* Linha de separação */
+}
+
+.header h2 {
+    font-size: 1.8rem;
+    color: #FFFFFF; /* Texto claro */
+    margin: 0;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.menu-icon:hover {
+    transform: scale(1.1); /* Leve aumento ao passar o mouse */
+}
+
+/* Dropdown do menu */
+.menu-dropdown {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #2C2C2C; /* Fundo do menu */
+    border: 1px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: none; /* Oculto por padrão */
+    flex-direction: column;
+    z-index: 10;
+}
+
+.menu-dropdown a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1rem;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s ease;
+}
+
+.menu-dropdown a:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+}
+
+.menu-dropdown a:hover {
+    background-color: #6C2CC0; /* Fundo roxo ao passar o mouse */
+}
+
+/* Área de mensagens */
+.message-area {
+    flex: 1;
+    overflow-y: auto;
+    margin: 20px;
+    padding: 20px;
+    background-color: #1E1E1E; /* Fundo para contraste */
+    border-radius: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #6C2CC0 #2C2C2C;
+}
+
+/* Estilo das mensagens */
+.message {
+    margin-bottom: 15px;
+    background-color: #303030; /* Fundo das mensagens */
+    padding: 10px;
+    border-radius: 8px;
+}
+.message span {
+    font-weight: bold;
+    color: #6C2CC0; /* Destaque no nome do usuário */
+}
+.message p {
+    margin: 5px 0 0;
+}
+
+/* Formulário de envio de mensagens */
+.send-message-form {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: #2C2C2C;
+    border-top: 1px solid #444;
+}
+
+.send-message-form input {
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #303030; /* Fundo escuro */
+    color: white;
+    font-size: 1rem;
+    outline: none; /* Remove contorno ao focar */
+    transition: box-shadow 0.3s ease;
+}
+.send-message-form input:focus {
+    box-shadow: 0 0 10px #6C2CC0; /* Sombra ao focar */
+}
+.send-message-form button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: #6C2CC0; /* Roxo médio */
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.send-message-form button:hover {
+    background-color: #503C6B; /* Roxo escuro */
+    transform: scale(1.05); /* Leve aumento no hover */
+}

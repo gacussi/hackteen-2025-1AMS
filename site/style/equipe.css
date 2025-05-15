@@ -1,0 +1,107 @@
+/* Estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #372F41; /* Fundo inicial */
+  overflow: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #6C2CC0;
+  padding: 10px 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+}
+
+.header .highlight {
+  color: #6E0EEB;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.header nav a.active {
+  text-decoration: underline;
+}
+
+/* Seção Equipe */
+.team {
+  padding: 50px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: #503C6B;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 325px;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  color: #E8E6E3;
+}
+
+.card p {
+  color: #E8E6E3;
+  margin: 10px 0;
+}
+
+.card a {
+  color: #6E0EEB;
+  text-decoration: none;
+}
+
+.card button {
+  background-color: #6E0EEB;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card button:hover {
+  transform: scale(1.1);
+}
+
+/* Rodapé */
+.footer {
+  background-color: #503C6B;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 50px;
+}
